@@ -12,7 +12,6 @@
 ✅ Reportes en PDF con iText y exportación por fecha.
 ✅ Login seguro con `bcrypt` y roles (Administrador / Empleado).
 ✅ Interfaz moderna con JavaFX y CSS personalizado.
-✅ Pruebas unitarias básicas con JUnit 5.
 
 ---
 
@@ -73,15 +72,8 @@ CafeteriaJava/
 
 2. **Configurar base de datos:**
 
-   * Crear la base de datos `cafeteria` en MySQL.
-   * Importar el script SQL con las tablas iniciales.
-   * Editar `DB.java` con tus credenciales:
-
-     ```java
-     private static final String URL = "jdbc:mysql://localhost:3306/cafeteria";
-     private static final String USER = "root";
-     private static final String PASS = "tu_password";
-     ```
+   * La base de datos esta subida en un servidor externo **Railway** (Al realizar las peticiones aguardar unos segundos 
+   hasta el servidor responda)
 
 3. **Ejecutar desde VS Code:** 
 -  Primera opcion:
