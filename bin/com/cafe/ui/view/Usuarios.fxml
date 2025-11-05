@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cafe.ui.controller.UsuarioController"
+      spacing="10" alignment="CENTER" style="-fx-padding:20;">
+
+    <Label text="Gestión de Usuarios"
+           style="-fx-font-size:20px;-fx-font-weight:bold;" />
+
+    <TableView fx:id="tablaUsuarios" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60" />
+            <TableColumn fx:id="colUsername" text="Usuario" prefWidth="160" />
+            <TableColumn fx:id="colRol" text="Rol" prefWidth="140" />
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="txtUsername" promptText="Usuario" />
+        <PasswordField fx:id="txtPassword" promptText="Contraseña" />
+        <ComboBox fx:id="cbRol" promptText="Rol" />
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Nuevo" onAction="#nuevoUsuario"/>
+        <Button text="Guardar" onAction="#guardarUsuario"/>
+        <Button text="Eliminar" onAction="#eliminarUsuario"/>
+        <Button text="Actualizar" onAction="#actualizarTabla"/>
+    </HBox>
+
+    <Label fx:id="lblMensaje" textFill="green" />
+
+</VBox>

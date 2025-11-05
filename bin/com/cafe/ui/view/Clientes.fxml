@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cafe.ui.controller.ClientesController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+    <Label text="👥 Gestión de Clientes" style="-fx-font-size: 20;"/>
+
+    <HBox spacing="8">
+        <TextField fx:id="txtNombre" promptText="Nombre"/>
+        <TextField fx:id="txtTelefono" promptText="Teléfono"/>
+        <TextField fx:id="txtEmail" promptText="Email"/>
+        <Button text="➕ Agregar" fx:id="btnAgregar"/>
+    </HBox>
+
+    <TableView fx:id="tablaClientes" prefWidth="600" prefHeight="300">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="200"/>
+            <TableColumn fx:id="colTelefono" text="Teléfono" prefWidth="150"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="200"/>
+            <TableColumn fx:id="colPuntos" text="Puntos" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="🗑 Eliminar" fx:id="btnEliminar"/>
+        <Button text="✏ Editar" fx:id="btnEditar"/>
+        <Button text="↩ Volver" fx:id="btnVolver"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cafe.ui.controller.MenuPrincipalAdminController"
+      spacing="20" style="-fx-padding:20;">
+
+    <Label text="☕ Panel Administrador" style="-fx-font-size:22px;-fx-font-weight:bold;"/>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="📦 Productos" onAction="#abrirProductos" prefWidth="150"/>
+        <Button text="👥 Clientes" onAction="#abrirClientes" prefWidth="150"/>
+        <Button text="🛒 Ventas" onAction="#abrirVentas" prefWidth="150"/>
+    </HBox>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="🧾 Reportes" onAction="#abrirReportes" prefWidth="150"/>
+        <Button text="👤 Usuarios" onAction="#abrirUsuarios" prefWidth="150"/>
+        <Button text="🚪 Cerrar Sesión" fx:id="btnCerrar" onAction="#cerrarSesion" prefWidth="150"/>
+    </HBox>
+
+</VBox>

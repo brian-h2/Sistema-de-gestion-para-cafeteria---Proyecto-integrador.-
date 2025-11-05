@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cafe.ui.controller.ReportesController"
+      spacing="10" alignment="CENTER" style="-fx-padding:20;">
+    <Label text="📊 Reportes de Ventas" style="-fx-font-size:22;"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="Desde:"/>
+        <DatePicker fx:id="dpDesde"/>
+        <Label text="Hasta:"/>
+        <DatePicker fx:id="dpHasta"/>
+        <Button text="🔍 Buscar" fx:id="btnBuscar"/>
+        <Button text="📄 Exportar PDF" fx:id="btnExportar"/>
+    </HBox>
+
+    <TableView fx:id="tablaVentas" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colFecha" text="Fecha" prefWidth="180"/>
+            <TableColumn fx:id="colCliente" text="Cliente" prefWidth="200"/>
+            <TableColumn fx:id="colTotal" text="Total" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <Label fx:id="lblTotalGeneral" text="Total general: $0.00"
+           style="-fx-font-size:16;-fx-font-weight:bold;"/>
+</VBox>

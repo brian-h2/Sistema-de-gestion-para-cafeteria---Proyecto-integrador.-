@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox  xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.cafe.ui.controller.CRUDProductosController"
+      spacing="10" style="-fx-padding:20;">
+
+    <Label text="☕ Gestión de Productos"
+           style="-fx-font-size:20px;-fx-font-weight:bold;" />
+    
+    <TableView fx:id="tablaProductos" prefHeight="250">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
+            <TableColumn fx:id="colTipo" text="Tipo" prefWidth="150"/>
+            <TableColumn fx:id="colPrecio" text="Precio" prefWidth="100"/>
+            <TableColumn fx:id="colStock" text="Stock" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+    <HBox spacing="10">
+        <TextField fx:id="txtNombre" promptText="Nombre"/>
+        <ComboBox fx:id="cbTipo" promptText="Tipo"/>
+        <TextField fx:id="txtPrecio" promptText="Precio"/>
+        <TextField fx:id="txtStock" promptText="Stock"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Limpiar campos" fx:id="NuevoProducto"/>
+        <Button text="Guardar" fx:id="GuardarProducto"/>
+        <Button text="Eliminar" fx:id="EliminarProducto"/>
+        <Button text="Actualizar" fx:id="ActualizarTabla"/>
+    </HBox>
+
+    <Label fx:id="lblMensaje" textFill="green" />
+
+</VBox>

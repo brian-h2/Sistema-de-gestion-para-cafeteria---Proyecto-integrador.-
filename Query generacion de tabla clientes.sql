@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS clientes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  telefono VARCHAR(20),
+  email VARCHAR(100),
+  puntos INT DEFAULT 0
+);
+
+ALTER TABLE ventas
+ADD COLUMN id_cliente INT NULL,
+ADD FOREIGN KEY (id_cliente) REFERENCES clientes(id);
